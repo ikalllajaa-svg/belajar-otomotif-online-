@@ -1,0 +1,466 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>OTO LEARNING - Belajar Otomotif Online</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #0b1120;
+    color: white;
+}
+
+header {
+    background: #111c30;
+    padding: 20px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.logo {
+    color: #ff6b00;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+}
+
+nav a:hover {
+    color: #ff6b00;
+}
+
+.hero {
+    min-height: 500px;
+    padding: 100px 8%;
+    display: flex;
+    align-items: center;
+    background: linear-gradient(90deg, #0b1120, #172c48);
+}
+
+.hero h1 {
+    font-size: 45px;
+    margin-bottom: 20px;
+}
+
+.hero h1 span {
+    color: #ff6b00;
+}
+
+.hero p {
+    color: #cbd5e1;
+    line-height: 1.7;
+    max-width: 550px;
+}
+
+.btn {
+    display: inline-block;
+    background: #ff6b00;
+    color: white;
+    padding: 13px 25px;
+    border-radius: 6px;
+    text-decoration: none;
+    margin-top: 25px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.btn:hover {
+    background: #e65c00;
+}
+
+section {
+    padding: 70px 8%;
+}
+
+.judul {
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 40px;
+}
+
+.judul span {
+    color: #ff6b00;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background: #17243a;
+    padding: 25px;
+    border-radius: 12px;
+    transition: 0.3s;
+    border: 1px solid #293b55;
+}
+
+.card:hover {
+    transform: translateY(-7px);
+    border-color: #ff6b00;
+}
+
+.card .icon {
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+
+.card h3 {
+    margin-bottom: 12px;
+    color: #ff8b35;
+}
+
+.card p {
+    color: #cbd5e1;
+    line-height: 1.6;
+    font-size: 14px;
+}
+
+.card button {
+    margin-top: 20px;
+    padding: 10px 18px;
+    background: #ff6b00;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.video {
+    background: #111c30;
+    text-align: center;
+}
+
+.video p {
+    color: #cbd5e1;
+    margin-bottom: 20px;
+}
+
+.quiz {
+    max-width: 650px;
+    margin: auto;
+    background: #17243a;
+    padding: 30px;
+    border-radius: 12px;
+}
+
+.quiz h3 {
+    margin-bottom: 20px;
+}
+
+.quiz button {
+    display: block;
+    width: 100%;
+    text-align: left;
+    padding: 13px;
+    margin: 10px 0;
+    background: #263750;
+    color: white;
+    border: 1px solid #42536b;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.quiz button:hover {
+    background: #ff6b00;
+}
+
+#hasil {
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+footer {
+    text-align: center;
+    background: #111c30;
+    padding: 25px;
+    color: #94a3b8;
+}
+
+@media(max-width: 700px) {
+    header {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav a {
+        margin: 0 7px;
+        font-size: 13px;
+    }
+
+    .hero h1 {
+        font-size: 34px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">OTO LEARNING</div>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#materi">Materi</a>
+        <a href="#video">Video</a>
+        <a href="#quiz">Kuis</a>
+    </nav>
+</header>
+
+<!-- BERANDA -->
+<div class="hero" id="home">
+    <div>
+        <h1>SELAMAT DATANG DI<br>
+        <span>OTO LEARNING</span></h1>
+
+        <p>
+        Platform belajar otomotif online untuk meningkatkan
+        pengetahuan dan keterampilan di bidang teknik sepeda motor.
+        Belajar lebih mudah, praktis, dan menyenangkan!
+        </p>
+
+        <a href="#materi" class="btn">MULAI BELAJAR</a>
+    </div>
+</div>
+
+<!-- MATERI -->
+<section id="materi">
+    <h2 class="judul">MATERI <span>OTOMOTIF</span></h2>
+
+    <div class="cards">
+
+        <div class="card">
+            <div class="icon">🔧</div>
+            <h3>Dasar Otomotif</h3>
+            <p>Mengenal dasar-dasar otomotif, komponen,
+            dan fungsi kendaraan sepeda motor.</p>
+            <button onclick="belajar('Dasar Otomotif')">
+                Pelajari
+            </button>
+        </div>
+
+        <div class="card">
+            <div class="icon">⚙️</div>
+            <h3>Sistem Mesin</h3>
+            <p>Mempelajari komponen mesin, prinsip kerja,
+            dan sistem pembakaran motor.</p>
+            <button onclick="belajar('Sistem Mesin')">
+                Pelajari
+            </button>
+        </div>
+
+        <div class="card">
+            <div class="icon">🔋</div>
+            <h3>Sistem Kelistrikan</h3>
+            <p>Mengenal aki, busi, sistem pengapian,
+            dan komponen kelistrikan.</p>
+            <button onclick="belajar('Sistem Kelistrikan')">
+                Pelajari
+            </button>
+        </div>
+
+        <div class="card">
+            <div class="icon">🏍️</div>
+            <h3>Sistem Rem</h3>
+            <p>Mempelajari fungsi rem cakram,
+            rem tromol, dan sistem pengereman.</p>
+            <button onclick="belajar('Sistem Rem')">
+                Pelajari
+            </button>
+        </div>
+
+        <div class="card">
+            <div class="icon">🛠️</div>
+            <h3>Perawatan Motor</h3>
+            <p>Mengenal pemeriksaan dan perawatan
+            berkala kendaraan sepeda motor.</p>
+            <button onclick="belajar('Perawatan Motor')">
+                Pelajari
+            </button>
+        </div>
+
+        <div class="card">
+            <div class="icon">🔩</div>
+            <h3>Sistem Transmisi</h3>
+            <p>Mempelajari fungsi transmisi,
+            kopling, dan pemindah tenaga.</p>
+            <button onclick="belajar('Sistem Transmisi')">
+                Pelajari
+            </button>
+        </div>
+
+    </div>
+</section>
+
+<!-- VIDEO -->
+<section class="video" id="video">
+    <h2 class="judul">VIDEO <span>PEMBELAJARAN</span></h2>
+
+    <p>Pelajari dunia otomotif melalui video pembelajaran.</p>
+
+    <a class="btn"
+       href="https://www.youtube.com/results?search_query=belajar+otomotif+sepeda+motor"
+       target="_blank">
+       TONTON VIDEO
+    </a>
+</section>
+
+<!-- KUIS -->
+<section id="quiz">
+    <h2 class="judul">KUIS <span>OTOMOTIF</span></h2>
+
+    <div class="quiz">
+        <h3 id="pertanyaan">
+            1. Apa fungsi utama busi pada sepeda motor?
+        </h3>
+
+        <div id="pilihan">
+            <button onclick="jawab(0)">A. Mengisi aki</button>
+            <button onclick="jawab(1)">B. Memercikkan bunga api</button>
+            <button onclick="jawab(2)">C. Mengatur rem</button>
+            <button onclick="jawab(3)">D. Mendinginkan mesin</button>
+        </div>
+
+        <p id="hasil"></p>
+        <p id="skor"></p>
+    </div>
+</section>
+
+<footer>
+    <p>© 2026 OTO LEARNING | Belajar Otomotif Online</p>
+    <p>Belajar • Berkarya • Menguasai Teknologi</p>
+</footer>
+
+<script>
+
+// NOTIFIKASI MATERI
+function belajar(materi) {
+    alert("Selamat belajar materi " + materi +
+    "! Tetap semangat belajar otomotif.");
+}
+
+// DATA KUIS
+const soal = [
+    {
+        tanya: "1. Apa fungsi utama busi pada sepeda motor?",
+        opsi: [
+            "A. Mengisi aki",
+            "B. Memercikkan bunga api",
+            "C. Mengatur rem",
+            "D. Mendinginkan mesin"
+        ],
+        benar: 1
+    },
+    {
+        tanya: "2. Apa fungsi utama aki?",
+        opsi: [
+            "A. Menyimpan energi listrik",
+            "B. Mengatur tekanan ban",
+            "C. Menggerakkan roda secara langsung",
+            "D. Mendinginkan mesin"
+        ],
+        benar: 0
+    },
+    {
+        tanya: "3. Apa fungsi sistem rem?",
+        opsi: [
+            "A. Menambah kecepatan",
+            "B. Menghemat bahan bakar",
+            "C. Memperlambat dan menghentikan kendaraan",
+            "D. Mengisi daya aki"
+        ],
+        benar: 2
+    }
+];
+
+let nomor = 0;
+let nilai = 0;
+
+function tampilSoal() {
+    document.getElementById("pertanyaan").innerText =
+        soal[nomor].tanya;
+
+    let pilihan = document.getElementById("pilihan");
+    pilihan.innerHTML = "";
+
+    soal[nomor].opsi.forEach((opsi, index) => {
+        let tombol = document.createElement("button");
+        tombol.innerText = opsi;
+        tombol.onclick = () => jawab(index);
+        pilihan.appendChild(tombol);
+    });
+}
+
+function jawab(index) {
+    if (index === soal[nomor].benar) {
+        nilai++;
+        document.getElementById("hasil").innerText =
+            "Benar! Jawaban kamu tepat.";
+    } else {
+        document.getElementById("hasil").innerText =
+            "Belum tepat. Tetap semangat belajar!";
+    }
+
+    document.getElementById("skor").innerText =
+        "Skor sementara: " + nilai;
+
+    nomor++;
+
+    document.querySelectorAll("#pilihan button").forEach(btn => {
+        btn.disabled = true;
+    });
+
+    let tombolLanjut = document.createElement("button");
+    tombolLanjut.innerText =
+        nomor < soal.length ? "Soal Berikutnya" : "Lihat Hasil";
+    tombolLanjut.onclick = lanjut;
+    document.getElementById("pilihan").appendChild(tombolLanjut);
+}
+
+function lanjut() {
+    if (nomor < soal.length) {
+        document.getElementById("hasil").innerText = "";
+        tampilSoal();
+    } else {
+        document.getElementById("pertanyaan").innerText =
+            "Kuis Selesai!";
+
+        document.getElementById("pilihan").innerHTML = "";
+
+        document.getElementById("hasil").innerText =
+            "Nilai akhir kamu: " + nilai + " dari " +
+            soal.length;
+
+        document.getElementById("skor").innerText =
+            "Terus tingkatkan pengetahuan otomotifmu!";
+    }
+}
+
+</script>
+
+</body>
+</html>
